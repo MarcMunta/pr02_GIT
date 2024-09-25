@@ -71,8 +71,7 @@ class Person
       echo "running";
     }
 
-
-    /**
+        /**
      * Set Player name in string
      *
      * @param  string  $name is string
@@ -85,6 +84,8 @@ class Person
 
         return $this;
     }
-  }
+}
+
+
 
 ?>
