@@ -1,52 +1,29 @@
-<?php
-
-namespace App\Models;
-
-/**
- * Represents play field.
- */
 class Player extends Person
 {
     /**
-     * Player name
-     *
-     * @var string
-     */
-    private $name;
-
-    /**
      * Player Status
      *
-     * @var boolean
+     * @var bool
      */
     private $active;
 
     /**
-     * Construct a Player with a name and the status.
+     * Construct a Player with a name, age, and the status.
      *
-     * @param string $name     Player name
-     * @param bool $active  Player Status
+     * @param string $name   Player name
+     * @param int $age      Age of person
+     * @param bool $active   Player Status
      */
-    public function __construct(string $name, bool $active)
+    public function __construct(string $name, int $age, bool $active)
     {
-        $this->name = $name;
+        parent::__construct($name, $age);
         $this->active = $active;
-    }
-
-    /**
-     * Get Player name
-     *
-     * @return  string
-     */
-    public function getName()
-    {
-        return $this->name;
     }
 
     /**
      * Get Player Status
      *
-     * @return  bool
+     * @return bool
      */
     public function getActive()
     {
@@ -54,24 +31,11 @@ class Player extends Person
     }
 
     /**
-     * Set Player name in string
-     *
-     * @param  string  $name is string
-     *
-     * @return  self
-     */
-    public function setName(string $name)
-    {
-        $this->name = $name;
-        return $this;
-    }
-
-    /**
      * Set status in bool
      *
-     * @param  bool  $active is true or false
+     * @param bool $active is true or false
      *
-     * @return  self
+     * @return self
      */
     public function setActive(bool $active)
     {
@@ -79,7 +43,6 @@ class Player extends Person
         return $this;
     }
 
-    // Parte Marc
     /**
      * Pass the ball to another player.
      *
@@ -119,3 +82,4 @@ class Player extends Person
         }
     }
 }
+?>
