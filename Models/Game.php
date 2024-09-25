@@ -18,7 +18,7 @@ class Game
   /**
    * Team #1 vs. Team #2
    *
-   * @var ArrayObject
+   * @var \ArrayObject
    */
   private $teams;
 
