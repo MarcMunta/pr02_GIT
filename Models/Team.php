@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Models;
-
-use Nette\Utils\ArrayList;
+use ArrayList;
+/* use Nette\Utils\ArrayList; */
 
 /**
  * Represents a team in a football match.

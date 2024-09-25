@@ -1,10 +1,3 @@
-<?php
-
-namespace App\Models;
-
-/**
- * Represents play field.
- */
 class Player extends Person
 {
     /**
@@ -89,5 +82,4 @@ class Player extends Person
         }
     }
 }
-
 ?>
