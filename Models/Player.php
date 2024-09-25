@@ -2,94 +2,44 @@
 
 namespace App\Models;
 
-
 /**
- * Represents play field.
+ * Represents any person.
  */
-class Player extends Person
+class Person
 {
-    /**
+/**
+   * age of person
+   *
+   * @var int
+   */
+  private $age;
+  
+  /**
+   * Get age of person
+   *
+   * @return  int
+   */ 
+  public function getAge()
+  {
+    return $this->age;
+  }
 
-     * Player name
-
-     *
-     * @var string
-     */
-    private $name;
-
-    /**
-     * Player Status
-     *
-     * @var boolean
-     */
-    private $active;
-
-    /**
-     * Construct a Player with a name and the status.
-     *
-     * @param string $name     Player name
-     * @param bool $active  Player Status
-     * @param bool $motivation  Player Motivation
-
-
-     */
-    public function __construct(string $name, bool $active)
-    {
-        $this->name = $name;
-        $this->active = $active;
+  /**
+   * Set age of person
+   *
+   * @param  int  $age  age of person
+   *
+   * @return  self
+   */ 
+  public function setAge(int $age)
+  {
+      $this->age = $age;
+      
+      return $this;
     }
-    /**
-     * Get Player name
-     *
-     * @return  string
-     */
-    public function getName()
-    {
-        return $this->name;
+    function run(){
+      echo "running";
     }
-    /**
-     * Get Player Status
-     *
-     * @return  bool
-     */
-    public function getActive()
-    {
-        return $this->active;
-    }
-
-    /**
-     * Get Player Motivation
-     *
-     * @return  bool
-     */
-
-
-
-    /**
-     * Set Player name in string
-     *
-     * @param  string  $name is string
-     *
-     * @return  self
-     */
-    public function setName(string $name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-    /**
-     * Set status in bool
-     *
-     * @param  bool  $active is true or false
-     *
-     * @return  self
-     */
-    public function setActive(bool $active)
-    {
-        $this->active = $active;
-
-        return $this;
-    }
-
 }
+
+?>
